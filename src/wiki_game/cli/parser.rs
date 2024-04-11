@@ -69,5 +69,5 @@ pub async fn parse() -> (GameArgs, SystemArgs) {
 }
 
 fn less_than_255(s: &str) -> Result<u8, String> {
-    number_range(s, 0, 99)
+    number_range(s, 0, 255)
 }
