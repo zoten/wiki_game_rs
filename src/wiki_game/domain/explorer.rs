@@ -39,7 +39,7 @@ pub async fn explore(
 
             result.append(add_to_result.as_mut());
         }
-        sleep(Duration::from_millis(10)).await;
+        sleep(Duration::from_millis(1)).await;
     }
 
     result.dedup();
@@ -54,7 +54,7 @@ pub async fn explore(
 
     // this is slightly hackish, since sometimes it seems the future dies before the message has been sent
     // probably I'd need to refactor the main loop
-    sleep(Duration::from_millis(10)).await;
+    sleep(Duration::from_millis(5)).await;
 
     ()
 }

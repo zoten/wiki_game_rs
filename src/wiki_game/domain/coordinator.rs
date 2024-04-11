@@ -145,6 +145,11 @@ pub async fn execute(ga: GameArgs) -> Result<(), String> {
         }
     }
 
+    if found == 0 {
+        info!("Target has not been found :(");
+        return Err(String::from("Target has not been found :("));
+    }
+
     let duration = start.elapsed().unwrap();
 
     let shortest_path = state
